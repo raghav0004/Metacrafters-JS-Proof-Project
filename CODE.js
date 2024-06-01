@@ -4,46 +4,37 @@ let nftCollection = [];
 
 // Step 2: Create the mintNFT function
 // This function takes parameters for the NFT metadata and adds the NFT to the collection
-function mintNFT(name, eyeColor, shirtType, bling) {
+function mintNFT(name, rarity, theme, specialFeature) {
     // Create an NFT object with the given metadata
     const nft = {
         name: name,
-        eyeColor: eyeColor,
-        shirtType: shirtType,
-        bling: bling
+        rarity: rarity,
+        theme: theme,
+        specialFeature: specialFeature
     };
-    // Add the NFT object to the nftCollection array
+    
+    // Add the NFT to the collection
     nftCollection.push(nft);
 }
 
-// Step 3: Create the listNFTs function
-// This function loops through the nftCollection array and prints the metadata of each NFT
+// Mint some NFTs with unique metadata
+mintNFT("Galactic Unicorn", "Legendary", "Space", "Rainbow Mane");
+mintNFT("Fire Dragon", "Epic", "Fantasy", "Flaming Tail");
+mintNFT("Cyber Samurai", "Rare", "Cyberpunk", "Energy Blade");
+
+// Step 3: List all the NFTs in the collection
 function listNFTs() {
-    // Loop through the array of NFTs
-    for (let i = 0; i < nftCollection.length; i++) {
-        console.log(`NFT ${i + 1}`); // Print the NFT number
-        console.log(`Name: ${nftCollection[i].name}`); // Print the name
-        console.log(`Eye Color: ${nftCollection[i].eyeColor}`); // Print the eye color
-        console.log(`Shirt Type: ${nftCollection[i].shirtType}`); // Print the shirt type
-        console.log(`Bling: ${nftCollection[i].bling}`); // Print the bling
-        console.log('-------------------------'); // Separator for readability
-    }
+    console.log("My NFT Collection:");
+    nftCollection.forEach(nft => {
+        console.log(`${nft.name} - Rarity: ${nft.rarity}, Theme: ${nft.theme}, Special Feature: ${nft.specialFeature}`);
+    });
 }
 
-// Step 4: Create the getTotalSupply function
-// This function returns the total number of NFTs in the collection
+// Step 4: Print the total supply of NFTs
 function getTotalSupply() {
-    return nftCollection.length; // Return the length of the nftCollection array
+    return nftCollection.length;
 }
 
-// Step 5: Call your functions below this line
-// Mint three NFTs with different metadata
-mintNFT("CryptoPunk", "Blue", "T-Shirt", "Gold Chain");
-mintNFT("EtherRock", "Green", "Hoodie", "Diamond Ring");
-mintNFT("BoredApe", "Brown", "Jacket", "Silver Watch");
-
-// List all the NFTs in the collection
+// Step 5: List all NFTs and print the total supply
 listNFTs();
-
-// Print the total supply of NFTs
 console.log(`Total Supply: ${getTotalSupply()}`);
