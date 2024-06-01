@@ -14,9 +14,9 @@ Project Structure:
 
 2.Minting Function: The mintNFT function creates and adds new NFT objects to the nftCollection array.
 
-#Listing Function: The listNFTs function prints each NFT’s metadata to the console in a readable format.
+3.Listing Function: The listNFTs function prints each NFT’s metadata to the console in a readable format.
 
-3.Supply Function: The getTotalSupply function returns the number of NFTs stored in the array.
+4.Supply Function: The getTotalSupply function returns the number of NFTs stored in the array.
 
 Conclusion:
 This project serves as an educational tool to understand the basic principles of NFT creation and management. It allows users to interact with the code by minting new NFTs, viewing their collection, and keeping track of the total supply. This simulation provides a foundational understanding of how NFTs function in a simplified environment.
